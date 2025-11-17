@@ -25,3 +25,7 @@ export const chatApi = {
   continueChat: (chatId, question, docId) =>
     axiosInstance.post(`/api/chat/query/${chatId}`, { question, docId }),
 };
+
+export const healthApi = {
+  check: () => axiosInstance.get('/health'),
+};
